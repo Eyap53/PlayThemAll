@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+</head>
+<body class="container">
+
+<header>
+
+</header>
+
+<main>
+    <% if (user) {%>
+  <p>You are currently logged in as <%= user.username%> <br />
+    <a href="/logout">Logout</a>
+    <a href="/home">Home</a>
+  </p>
+    <%}
+    else {%>
+  <a href="/login">Login</a>
+  <br />
+  <a href="/signup">SIGN UP</a>
+    <% } %>%>
+</main>
+
+<footer>
+
+</footer>
+
+</body>
+</html>

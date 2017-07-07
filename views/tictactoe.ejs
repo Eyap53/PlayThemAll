@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Super Chat temps réel !</title>
+    <style>
+        #zone_chat strong {
+            color: white;
+            background-color: black;
+            padding: 2px;
+        }
+    </style>
+</head>
+
+<body>
+<a href="/tictactoe"> Jouer au morpion</a>
+<h1><%= user.username %> - Chat :</h1>
+
+<form action="/" method="post" id="formulaire_chat">
+    <input type="text" name="message" id="message" placeholder="Votre message..." size="50" autofocus />
+    <input type="submit" id="envoi_message" value="Envoyer" />
+</form>
+
+<section id="zone_chat">
+
+</section>
+
+<section id="zone_tictactoe">
+    <table id="board">
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+    <input type="button" id="reset" value="Play another" />
+
+    <p><a href="#" onclick="return callmymethod(0,0)">0,0</a></p>
+    <p><a href="#" onclick="return callmymethod(0,1)">0,1</a></p>
+    <p><a href="#" onclick="return callmymethod(0,2)">0,2</a></p>
+
+    <p><a href="#" onclick="return callmymethod(1,0)">1,0</a></p>
+    <p><a href="#" onclick="return callmymethod(1,1)">1,1</a></p>
+    <p><a href="#" onclick="return callmymethod(1,2)">1,2</a></p>
+
+    <p><a href="#" onclick="return callmymethod(2,0)">2,0</a></p>
+    <p><a href="#" onclick="return callmymethod(2,1)">2,1</a></p>
+    <p><a href="#" onclick="return callmymethod(2,2)">2,2</a></p>
+</section>
+
+<section id="zone_tictactoe_2">
+</section>
+
+<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+<script src="/socket.io/socket.io.js"></script>
+<script>
+
+    // Connexion à socket.io
+    var game = io.connect('/tictactoe');
+
+    // Quand on reçoit un message, on l'insère dans la page
+    game.on('message', function(data) {
+        insereMessage(data.username, data.message)
+    })
+
+    // Quand un nouveau client se connecte, on affiche l'information
+    game.on('nouveau_client', function(username) {
+        $('#zone_chat').prepend('<p><em>' + username + ' a rejoint le Chat !</em></p>');
+    })
+
+    // Lorsqu'on envoie le formulaire, on transmet le message et on l'affiche sur la page
+    $('#formulaire_chat').submit(function () {
+        var message = $('#message').val();
+        chat.emit('message', message); // Transmet le message aux autres
+        insereMessage('Moi', message); // Affiche le message aussi sur notre page
+        $('#message').val('').focus(); // Vide la zone de Chat et remet le focus dessus
+        return false; // Permet de bloquer l'envoi "classique" du formulaire
+    });
+
+    // Ajoute un message dans la page
+    function insereMessage(username, message) {
+        $('#zone_chat').prepend('<p><strong>' + username + '</strong> : ' + message + '</p>');
+    }
+
+    /// Fonction du jeu en lui-meme :
+
+    function place_marker(x, y) {
+        $('#zone_tictactoe_2').prepend('(' + x + ',' + y + ')');
+    }
+
+    function callmymethod(abs, ord){
+        game.emit('marker', {abs: abs, ord: ord})
+        place_marker(abs,ord);
+        return false;
+    }
+
+</script>
+</body>
+</html>

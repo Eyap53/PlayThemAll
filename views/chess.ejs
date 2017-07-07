@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="stylesheet" href="/lib/chessboard-0.3.0.min.css">
+	<link rel="stylesheet" href="/css/style.css" />
+</head>
+<body class="container">
+
+<header>
+
+</header>
+
+<main>
+  <p>You are currently logged in as <%= user.username %> <br />
+    <a href="/logout">Logout</a>
+    <a href="/home">Home</a>
+  </p>
+  <p>
+	You are currently in the lobby. Waiting for people
+  </p>
+  	<section id="gameBoard">
+	  <div class="page game" id='page-game'>
+		<button id='game-back'>Back</button>
+		<button id='game-surrender'>Surrender</button>
+		<div id='game-board' style="width: 400px">
+		</div>
+		</div>
+	</section>
+	
+    <h1><%= user.username %> - Chat :</h1>
+
+<form action="/" method="post" id="formulaire_chat">
+    <input type="text" name="message" id="message" placeholder="Votre message..." size="50" autofocus />
+    <input type="submit" id="envoi_message" value="Envoyer" />
+</form>
+
+<div id="zone_start_button">
+</div>
+
+<section id="zone_chat">
+
+</section>
+</section>
+</main>
+
+<footer>
+
+</footer>
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="/socket.io/socket.io.js"></script>
+<script src="/lib/chess.min.js"></script> 
+<script src="/lib/chessboard-0.3.0.min.js"></script>
+<script src="/js/chess_socket_client.js"></script> 
+</body>
+</html>
