@@ -34,3 +34,6 @@ autre TODO :
 Affichage :
 - rendre ça plus joli, esthetique.
 - Afficher qui est en train de jouer, et les personnes présentes sur la partie
+
+TO DO :
+- Add team for the player : There need to be some kind of default value.
