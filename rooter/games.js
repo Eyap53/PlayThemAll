@@ -7,8 +7,8 @@ router.get('/', isLoggedIn, function(req, res, next) {
 });
 
 /* GET games/ */
-router.get('/chess', isLoggedIn, function(req, res, next) {
-  res.render('chess', { user : req.user });
+router.get('/chess/:id_room', isLoggedIn, function(req, res, next) {
+  res.render('chess', { user : req.user, room : req.params.id_room });
 });
 
 

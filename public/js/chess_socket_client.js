@@ -2,6 +2,8 @@ var board;
 var game;
 var started = false;
 var user;
+var pathArray = window.location.pathname.split( '/' );
+var id_room = pathArray[ pathArray.length - 1 ];
 
 // I Need to use an api to get the username !
 // $http.get( "/api/get_user").success(function( data ) {
@@ -29,7 +31,7 @@ var initGame = function() {
 	
 	chess_socket.on('connect', function() {
 		// Connected, let's sign-up for to receive messages for this room
-		chess_socket.emit('join', "1");
+		chess_socket.emit('join', id_room );
 	});
 
 		// Quand on reçoit un message, on l'insère dans la page
