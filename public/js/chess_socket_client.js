@@ -1,6 +1,13 @@
 var board;
 var game;
 var started = false;
+var user;
+
+// I Need to use an api to get the username !
+// $http.get( "/api/get_user").success(function( data ) {
+  // user = data; //from your sample;
+  // alert( "Load was performed. " + data );
+// });
 
 window.onload = function () {
     initGame();
@@ -94,10 +101,9 @@ var initGame = function() {
 		// called when the server calls socket.broadcast('move')
 	chess_socket.on('start', function (list_player) {
 		started = true;
-		$('#zone_chat').prepend('<p>Le salon est plein. La partie peut commencer.</p>');
-		var len = list.length;
+		var len = list_player.length;
 		for ( var i = 0; i < len; i++) {
-			$('#zone_chat').prepend('<p>' + list[i].name + 'est dans l equipe : ' + list[i].team + '</p>');
+			$('#zone_chat').prepend('<p>' + list_player[i].name + 'est dans l equipe : ' + list_player[i].team + '</p>');
 		};
 	});
 	
@@ -111,5 +117,12 @@ var initGame = function() {
     chess_socket.on('forbidden', function(msg) {
 		$('#zone_chat').prepend('<p><strong>' + msg + '</strong></p>');
     });
+	
+	
+	
+			//OTHERS
+	$("#test_button").click(function() { //C'est un peu moche mais ça a l'air de fonctionner
+		chess_socket.emit('test');
+	});
 
 
