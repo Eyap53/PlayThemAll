@@ -11,12 +11,6 @@ Problèmes actuel :
 
 TODO :
 
-
-- Actuellement; toute la logique est coté client. Je voudrais la ramenner coté serveur.
-On ré-utilise le meme fichier chess.js; en l'integrant avec les sockets; et en utilisant l'API.
-Par contre, je peux réduire le coté client à juste les coups légaux. Pas vraiment besoin de tout mémoriser deux fois.
-
-
 - Rajouter un mode spectateur.
 - De meme, faire en sorte qu'un mec ne puisse pas rejoindre deux fois le salon. (ou plutot que ca soit la meme page)
 
@@ -28,12 +22,8 @@ Par contre, je peux réduire le coté client à juste les coups légaux. Pas vra
 
 
 autre TODO :
-- Faire en sorte que y'ai plusieurs room possible, donc plusieurs game
+- Faire en sorte que y'ai plusieurs room possible, donc plusieurs games
 - Mettre en place l'IA aléatoire
 
-Affichage :
-- rendre ça plus joli, esthetique.
-- Afficher qui est en train de jouer, et les personnes présentes sur la partie
-
-TO DO :
-- Add team for the player : There need to be some kind of default value.
+Appearance : 
+- Need to do a angular project for the clients.

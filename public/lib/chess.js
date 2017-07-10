@@ -1157,6 +1157,13 @@ var Chess = function(fen) {
   function trim(str) {
     return str.replace(/^\s+|\s+$/g, '');
   }
+  
+  
+  //// My functions :
+  
+  function get_teams() {
+    return [WHITE, BLACK];
+  }
 
   /*****************************************************************************
    * DEBUGGING UTILITIES
@@ -1219,6 +1226,9 @@ var Chess = function(fen) {
 
     reset: function() {
       return reset();
+    },
+	get_teams: function() {
+      return get_teams();
     },
 
     moves: function(options) {

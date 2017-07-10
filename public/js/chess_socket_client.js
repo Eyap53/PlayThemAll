@@ -92,8 +92,13 @@ var initGame = function() {
 	};
 
 		// called when the server calls socket.broadcast('move')
-	chess_socket.on('start', function () {
+	chess_socket.on('start', function (list_player) {
 		started = true;
+		$('#zone_chat').prepend('<p>Le salon est plein. La partie peut commencer.</p>');
+		var len = list.length;
+		for ( var i = 0; i < len; i++) {
+			$('#zone_chat').prepend('<p>' + list[i].name + 'est dans l equipe : ' + list[i].team + '</p>');
+		};
 	});
 	
 		// called when the server calls socket.broadcast('move')
