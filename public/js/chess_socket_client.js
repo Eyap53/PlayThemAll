@@ -103,7 +103,7 @@ var initGame = function() {
 		started = true;
 		var len = list_player.length;
 		for ( var i = 0; i < len; i++) {
-			$('#zone_chat').prepend('<p>' + list_player[i].name + 'est dans l equipe : ' + list_player[i].team + '</p>');
+			$('#zone_chat').prepend('<p>' + list_player[i].name + ' est dans l equipe : ' + list_player[i].team + '</p>');
 		};
 	});
 	
@@ -113,13 +113,19 @@ var initGame = function() {
 		board.position(game.fen()); // fen is the board layout
 	});
 	
+		// called when the server calls socket.broadcast('move')
+	chess_socket.on('undo', function () {
+		game.undo();
+		board.position(game.fen()); // fen is the board layout
+	});
+	
 			// forbidden
     chess_socket.on('forbidden', function(msg) {
 		$('#zone_chat').prepend('<p><strong>' + msg + '</strong></p>');
     });
 	
 	
-	
+
 			//OTHERS
 	$("#test_button").click(function() { //C'est un peu moche mais ça a l'air de fonctionner
 		chess_socket.emit('test');

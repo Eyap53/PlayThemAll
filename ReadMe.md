@@ -1,9 +1,6 @@
 ALPHA
 ===========
 
-- Structure simple
-
-
 Problèmes actuel :
 
 - Si tu actualise la page ça bug
