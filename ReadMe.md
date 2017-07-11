@@ -8,12 +8,12 @@ A live version will be available soon.
 ## Dependencies :
 
 This project needs NodeJs to run, as well as :
-	- Express, a framework 
-	- EJS, the templating language
-	- Passport, an authentication middleware for Node.js
-	- MongoDB, a noSQL database
-	- Socket.io, the real-time engine for the chats and games.
-	- Connect-..., sessions store.
+- Express, a framework 
+- EJS, the templating language
+- Passport, an authentication middleware for Node.js
+- MongoDB, a noSQL database
+- Socket.io, the real-time engine for the chats and games.
+- Connect-..., sessions store.
 	
 You can install with the following command :
 ```
