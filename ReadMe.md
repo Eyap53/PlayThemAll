@@ -46,7 +46,7 @@ Appearance :
 
 ## Authors
 
-* **Mael Lacour** - *Initial work* - [LacourMael](https://github.com/LacourMael)
+* **Mael Lacour** - *Initial work* - [MaelLacour](https://github.com/MaelLacour)
 
 
 ## License
