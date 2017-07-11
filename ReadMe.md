@@ -1,26 +1,57 @@
-ALPHA
-===========
+# PlayThemAll
 
-Problèmes actuel :
+NodeJs Project to play games in real-time. Today, only Chess is available, but there will be more later !
+It is planned to develop a lobby system. Don't hesitate to fork the project and make a pull request if interested !
 
-- Si tu actualise la page ça bug
-- Si le leader quitte le salon plus personne ne peux lancer le jeu
+A live version will be available soon.
 
-TODO :
+## Dependencies :
 
-- Rajouter un mode spectateur.
-- De meme, faire en sorte qu'un mec ne puisse pas rejoindre deux fois le salon. (ou plutot que ca soit la meme page)
+This project needs NodeJs to run, as well as :
+	- Express, a framework 
+	- EJS, the templating language
+	- Passport, an authentication middleware for Node.js
+	- MongoDB, a noSQL database
+	- Socket.io, the real-time engine for the chats and games.
+	- Connect-..., sessions store.
+	
+You can install with the following command :
+```
+npm install
+```
+
+For the games actually provided, this project also uses :
+- [Chess.js](https://github.com/jhlywa/chess.js) (which is modified)
 
 
-- Mettre un game over (voir les fcts de chess/js)
-- gerer les égalités
-- gerer le surrender
-- gerer le quittage de salon (remettre la place dispo, etc... Mettre un délai de 1sec). en partie, délai de 10 sec.
+## TODO
 
+The following still need to be done :
 
-autre TODO :
-- Faire en sorte que y'ai plusieurs room possible, donc plusieurs games
-- Mettre en place l'IA aléatoire
+Some feature to implement (By priority)
+- game over
+- save games when they are finished, and reload it
+- draw
+- surrender
+- Lobby functions
+- Add spectatory mode.
+- Delay to the disconnect
+- Be careful about double connections.
+- AI of some games
 
 Appearance : 
-- Need to do a angular project for the clients.
+- Need to do add a client side complementary project (such as a Angular project), to play different games.
+
+
+
+## Authors
+
+* **Mael Lacour** - *Initial work* - [LacourMael](https://github.com/LacourMael)
+
+
+## License
+
+This project is licensed under the GNU GPL License - see the [LICENSE.md](LICENSE.md) file for details
+
+
+
