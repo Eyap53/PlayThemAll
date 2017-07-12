@@ -1,6 +1,8 @@
 # PlayThemAll
 
-NodeJs Project to play games in real-time. Today, only Chess is available, but there will be more later !
+NodeJs Project to play board games in real-time. 
+
+Today, only Chess is available, but there will be more later !
 It is planned to develop a lobby system. Don't hesitate to fork the project and make a pull request if interested !
 
 A live version will be available soon.
@@ -51,7 +53,7 @@ Appearance :
 
 ## License
 
-This project is licensed under the GNU GPL License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the GNU GPL License - see the [LICENSE](LICENSE) file for details
 
 
 
