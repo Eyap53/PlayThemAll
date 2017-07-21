@@ -29,9 +29,7 @@ For the games actually provided, this project also uses :
 The following still need to be done :
 
 Some feature to implement (By priority)
-- game over
-- save games when they are finished, and reload it
-- draw
+- reload function
 - surrender
 - Lobby functions
 - Add spectatory mode.

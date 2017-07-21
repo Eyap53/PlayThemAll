@@ -125,6 +125,9 @@ var initGame = function() {
     chess_socket.on('forbidden', function(msg) {
 		$('#zone_chat').prepend('<p><strong>' + msg + '</strong></p>');
     });
+	chess_socket.on('game_ended', function(msg) {
+		$('#zone_chat').prepend('<p><strong>' + msg + '</strong></p>');
+    });
 	
 	
 
