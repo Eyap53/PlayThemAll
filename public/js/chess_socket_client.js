@@ -86,7 +86,7 @@ var initGame = function() {
 	});
 	
 		//Si un joueur veut abandonner
-	$("#game-surrender").click(function() { //
+	$("#game_surrender").click(function() { //
 		chess_socket.emit('surrender');
 	});
 	
@@ -127,6 +127,16 @@ var initGame = function() {
     });
 	chess_socket.on('game_ended', function(msg) {
 		$('#zone_chat').prepend('<p><strong>' + msg + '</strong></p>');
+    });
+	
+		// For the reset
+	$("#game_reset").click(function() { //
+		chess_socket.emit('reset');
+	});
+	
+	chess_socket.on('reset', function(msg) {
+		game.reset();
+		board.position(game.fen());
     });
 	
 	
