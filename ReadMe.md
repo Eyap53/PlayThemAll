@@ -29,13 +29,13 @@ For the games actually provided, this project also uses :
 The following still need to be done :
 
 Some feature to implement (By priority)
-- reload function
+- Things are working, but it's not efficient. There is a need to improve it all, (it will be easier later for the implementation of other games).
+
 - surrender
 - Lobby functions
 - Add spectatory mode.
 - Delay to the disconnect
 - Be careful about double connections.
-- AI of some games
 
 Appearance : 
 - Need to do add a client side complementary project (such as a Angular project), to play different games.

@@ -110,8 +110,8 @@ var initGame = function() {
 	});
 	
 		// called when the server calls socket.broadcast('move')
-	chess_socket.on('move', function (msg) {
-		game.move(msg);
+	chess_socket.on('move', function (fen) {
+		game.load(fen);
 		board.position(game.fen()); // fen is the board layout
 	});
 	
@@ -139,7 +139,9 @@ var initGame = function() {
 		board.position(game.fen());
     });
 	
-	
+	$("#play_against_AI").click(function() { //
+		chess_socket.emit('play_against_AI');
+	});
 
 			//OTHERS
 	$("#test_button").click(function() { //C'est un peu moche mais ça a l'air de fonctionner

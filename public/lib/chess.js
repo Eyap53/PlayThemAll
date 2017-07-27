@@ -1257,6 +1257,45 @@ var Chess = function(fen) {
       return moves;
     },
 
+	/* Start of AI API
+	 * ( API needed for the ai implementation )
+	 */	
+	 
+	ugly_moves: function(options) {
+        return generate_moves(options);
+    },
+		
+	ugly_move: function(move_obj, options) {
+            var pretty_move = make_pretty(move_obj);
+            make_move(move_obj);
+
+            return pretty_move;
+    },
+	
+	board: function() {
+		var output = [],
+			row    = [];
+
+		for (var i = SQUARES.a8; i <= SQUARES.h1; i++) {
+			if (board[i] == null) {
+				row.push(null)
+			} else {
+				row.push({type: board[i].type, color: board[i].color})
+			}
+			if ((i + 1) & 0x88) {
+				output.push(row);
+				row = []
+				i += 8;
+			}
+		}
+
+		return output;
+    },
+		
+	/* 
+	 * End of AI's API
+	 */	
+		
     in_check: function() {
       return in_check();
     },
