@@ -19,10 +19,10 @@ var io                  = require('socket.io').listen(server);
 var passportSocketIo    = require("passport.socketio");
 
 // SETTINGS =====================================================================
-var mongo_db = MONGODB_URI || 'mongodb://localhost/test1';
-var session_secret = SESSION_SECRET || 'a changer';
+var mongo_db = process.env.MONGODB_URI || 'mongodb://localhost/test1';
+var session_secret = process.env.SESSION_SECRET || 'a changer';
 var session_key = "connect.sid";
-var port = PORT || 8080;
+var port = process.env.PORT || 8080;
 var pkg = require('./package.json');
 
 app.use(express.static(__dirname + '/public'));
