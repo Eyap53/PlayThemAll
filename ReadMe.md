@@ -30,14 +30,14 @@ For the games actually provided, this project also uses :
 
 The following still need to be done :
 
-Some feature to implement (By priority)
+Some features to implement (By priority) :
 - Things are working, but it's not efficient. There is a need to improve it all, (it will be easier later for the implementation of other games).
 
-- surrender
+- Surrender
 - Lobby functions
 - Add spectatory mode.
-- Delay to the disconnect
-- Be careful about double connections.
+- Delay before disconnection
+- Prevent double connections.
 
 Appearance : 
 - Need to do add a client side complementary project (such as a Angular project), to play different games.
@@ -46,7 +46,7 @@ Appearance :
 
 ## Authors
 
-* **Mael Lacour** - *Initial work* - [MaelLacour](https://github.com/MaelLacour)
+* **Eyap53** - *Initial work* - [Eyap53](https://github.com/Eyap53)
 
 
 ## License
