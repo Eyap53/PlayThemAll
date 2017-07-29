@@ -1,6 +1,8 @@
 # PlayThemAll
 
-NodeJs Project to play games in real-time. Today, only Chess is available, but there will be more later !
+NodeJs Project to play board games in real-time. 
+
+Today, only Chess is available, but there will be more later !
 It is planned to develop a lobby system. Don't hesitate to fork the project and make a pull request if interested !
 
 A live version will be available soon.
@@ -8,12 +10,12 @@ A live version will be available soon.
 ## Dependencies :
 
 This project needs NodeJs to run, as well as :
-	- Express, a framework 
-	- EJS, the templating language
-	- Passport, an authentication middleware for Node.js
-	- MongoDB, a noSQL database
-	- Socket.io, the real-time engine for the chats and games.
-	- Connect-..., sessions store.
+- Express, a framework 
+- EJS, the templating language
+- Passport, an authentication middleware for Node.js
+- MongoDB, a noSQL database
+- Socket.io, the real-time engine for the chats and games.
+- Connect-..., sessions store.
 	
 You can install with the following command :
 ```
@@ -44,12 +46,12 @@ Appearance :
 
 ## Authors
 
-* **Mael Lacour** - *Initial work* - [LacourMael](https://github.com/LacourMael)
+* **Mael Lacour** - *Initial work* - [MaelLacour](https://github.com/MaelLacour)
 
 
 ## License
 
-This project is licensed under the GNU GPL License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the GNU GPL License - see the [LICENSE](LICENSE) file for details
 
 
 

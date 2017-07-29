@@ -1,16 +1,25 @@
 {
-  "name": "alpha",
-  "version": "0.0.0",
-  "private": true,
+  "name": "PlayThemAll",
+  "version": "0.1.0",
+  "description": "NodeJs Project to play board games in real-time",
   "scripts": {
     "start": ""
   },
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/MaelLacour/PlayThemAll"
   },
-  "author": "",
-  "license": "",
+    "keywords": [
+"nodejs",
+"socket-io",
+"passport",
+"mongodb",
+"express",
+"games",
+"boardgames"
+  ],
+  "author": "MaelLacour",
+  "license": "GPL-3.0",
   "dependencies": {
     "body-parser": "^1.10.2",
     "connect-flash": "^0.1.1",
