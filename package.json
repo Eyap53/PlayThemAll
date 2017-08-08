@@ -1,6 +1,6 @@
 {
   "name": "PlayThemAll",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "NodeJs Project to play board games in real-time",
   "scripts": {
     "start": "node index.js"

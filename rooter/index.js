@@ -2,7 +2,7 @@ var passport = require('passport');
 var router = require('express').Router();
 var flash = require('connect-flash');
 
-router.get('/', function (req, res) {
+router.get('/', isLoggedIn, function (req, res) {
     res.render('index', { user : req.user });
 });
 
@@ -31,10 +31,6 @@ router.get('/logout', function(req, res) {
     res.redirect('/');
 });
 
-router.get('/home', isLoggedIn, function (req, res) {
-    res.render('home', { user : req.user });
-});
-
 module.exports = router;
 
 // route middleware to make sure a user is logged in
@@ -45,5 +41,5 @@ function isLoggedIn(req, res, next) {
         return next();
 
     // if they aren't redirect them to the home page
-    res.redirect('/');
+    res.redirect('/login');
 }
