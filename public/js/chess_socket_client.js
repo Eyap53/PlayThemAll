@@ -101,12 +101,14 @@ var initGame = function() {
 	};
 
 		// called when the server calls socket.broadcast('move')
-	chess_socket.on('start', function (list_player) {
+	chess_socket.on('start', function () {
 		started = true;
+		/* 		
 		var len = list_player.length;
 		for ( var i = 0; i < len; i++) {
 			$('#zone_chat').prepend('<p>' + list_player[i].name + ' est dans l equipe : ' + list_player[i].team + '</p>');
-		};
+		}; 
+		*/
 	});
 	
 		// called when the server calls socket.broadcast('move')
