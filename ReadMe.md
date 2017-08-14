@@ -13,7 +13,7 @@ If this project picks your interest, let me know !
 
 As of today, only Chess is available, but i plan to add more later !
 
-You can find a live version (but very ugly) at this link : https://guarded-depths-27498.herokuapp.com/
+You can find a live version (but very ugly) [here](https://guarded-depths-27498.herokuapp.com/)
 
 ## Dependencies :
 
