@@ -1,11 +1,19 @@
 # PlayThemAll
 
-NodeJs Project to play board games in real-time. 
+This project (which was originally started to test NodeJS and sockets, but still in developpment) aims to build a game plateform.
+People will be able 
+- to reserve a pseudo
+- Connect to lobbies
+- Chat in lobbies
+- play different games
 
-Today, only Chess is available, but there will be more later !
-It is planned to develop a lobby system. Don't hesitate to fork the project and make a pull request if interested !
+For chat and games, I use sockets, for a real time experience !
+If this project picks your interest, let me know !
 
-A live version will be available soon.
+
+As of today, only Chess is available, but i plan to add more later !
+
+You can find a live version (but very ugly) at this link : https://guarded-depths-27498.herokuapp.com/
 
 ## Dependencies :
 
@@ -28,19 +36,19 @@ For the games actually provided, this project also uses :
 
 ## TODO
 
-The following still need to be done :
+The following still needs to be done :
 
-Some features to implement (By priority) :
+Some features to implement (By prioritizing) :
 - Things are working, but it's not efficient. There is a need to improve it all, (it will be easier later for the implementation of other games).
 
 - Surrender
 - Lobby functions
-- Add spectatory mode.
+- Update spectator mode.
 - Delay before disconnection
 - Prevent double connections.
 
 Appearance : 
-- Need to do add a client side complementary project (such as a Angular project), to play different games.
+- Need to do add a client side complementary project (such as an Angular project), to play different games.
 
 
 
