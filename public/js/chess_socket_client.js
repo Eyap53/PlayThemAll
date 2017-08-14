@@ -93,22 +93,27 @@ var initGame = function() {
 	
 		// called when a player makes a move on the board UI
 	var handleMove = function(source, target) {
-		var move = game.move({from: source, to: target});
-		
-		if ( move === null || !started )  return 'snapback';
-		else chess_socket.emit('move', move);
-		
+		if ( !started ) {
+			$('#zone_chat').prepend("<p>La partie n'a pas encore démarrée.</p>");
+			return 'snapback';
+		}
+		else {
+			var move = game.move({from: source, to: target});
+			
+			if ( move === null )  return 'snapback';
+			else chess_socket.emit('move', move);
+		}
 	};
 
 		// called when the server calls socket.broadcast('move')
-	chess_socket.on('start', function () {
+	chess_socket.on('start', function (list_player) {
 		started = true;
-		/* 		
+		$('#zone_chat').prepend('<p>La partie a demarré. </p>');
+		
 		var len = list_player.length;
 		for ( var i = 0; i < len; i++) {
-			$('#zone_chat').prepend('<p>' + list_player[i].name + ' est dans l equipe : ' + list_player[i].team + '</p>');
+			$('#zone_chat').prepend('<p>' + list_player[i][0] + ' est dans l equipe : ' + list_player[i][1] + '</p>');
 		}; 
-		*/
 	});
 	
 		// called when the server calls socket.broadcast('move')
