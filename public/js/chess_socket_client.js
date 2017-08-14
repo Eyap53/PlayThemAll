@@ -31,6 +31,7 @@ var initGame = function() {
 	
 	chess_socket.on('pseudo', function(data) {
 		pseudo = data;
+		insereMessage(pseudo, 'it is me');
 	});
 	
 
