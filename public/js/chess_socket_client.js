@@ -1,15 +1,10 @@
 var board;
 var game;
 var started = false;
-var user;
+var pseudo = "";
 var pathArray = window.location.pathname.split( '/' );
 var id_room = pathArray[ pathArray.length - 1 ];
 
-// I Need to use an api to get the username !
-// $http.get( "/api/get_user").success(function( data ) {
-  // user = data; //from your sample;
-  // alert( "Load was performed. " + data );
-// });
 
 window.onload = function () {
     initGame();
@@ -33,6 +28,11 @@ var initGame = function() {
 		// Connected, let's sign-up for to receive messages for this room
 		chess_socket.emit('join', id_room );
 	});
+	
+	chess_socket.on('pseudo', function(data) {
+		pseudo = data;
+	});
+	
 
 		// Quand on reçoit un message, on l'insère dans la page
     chess_socket.on('message', function(data) {
