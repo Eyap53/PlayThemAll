@@ -13,7 +13,7 @@ If this project picks your interest, let me know !
 
 As of today, only Chess is available, but i plan to add more later !
 
-You can find a live version (but very ugly) [here](https://guarded-depths-27498.herokuapp.com/)
+Here is a live version (but unfortunately very ugly) : [https://guarded-depths-27498.herokuapp.com/](https://guarded-depths-27498.herokuapp.com/)
 
 ## Dependencies :
 
@@ -39,13 +39,13 @@ For the games actually provided, this project also uses :
 The following still needs to be done :
 
 Some features to implement (By prioritizing) :
-- Things are working, but it's not efficient. There is a need to improve it all, (it will be easier later for the implementation of other games).
-
+- Add explanations for players
 - Surrender
 - Lobby functions
 - Update spectator mode.
 - Delay before disconnection
 - Prevent double connections.
+
 
 Appearance : 
 - Need to do add a client side complementary project (such as an Angular project), to play different games.
