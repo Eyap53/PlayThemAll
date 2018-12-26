@@ -1,4 +1,4 @@
-This project is actually suspended. Play against the chess ia is possible and working, but it produced some bugs for player against player. Please read below for more info about the project.
+This project is actually suspended. Play against the chess AI is possible and working, but it produced some bugs for player against player. Please read below for more info about the project.
 
 # PlayThemAll
 
@@ -9,13 +9,11 @@ People will be able
 - Chat in lobbies
 - play different games
 
-For chat and games, I use sockets, for a real time experience.
+For chat and games, sockets are used for a real time experience.
 If this project picks your interest, let me know !
 
 
-As of today, only Chess is available, but i was planned to add more later.
-
-Here is a live version (but unfortunately very ugly) : [https://guarded-depths-27498.herokuapp.com/](https://guarded-depths-27498.herokuapp.com/)
+As of today, only Chess is available.
 
 ## Dependencies :
 
